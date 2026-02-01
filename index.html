@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Page character set -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the site responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab title -->
+    <title>Lush Crafts - Sustainable Botanical Crafts</title>
+
+    <!-- Main CSS file (your design styles) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Optimize Google font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google fonts used in headings and body -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- =========================
+         HEADER / NAVIGATION
+         ========================= -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+
+                <!-- Website logo (clicking goes to homepage) -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="static/images/logo.png" alt="Lush Craft Logo" class="logo-image">
+                    </a>
+                </div>
+
+                <!-- Navigation links (desktop view) -->
+                <ul class="nav-menu">
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="gallery.html" class="nav-link">Botanical Gallery</a></li>
+                    <li><a href="process.html" class="nav-link">The Process</a></li>
+                </ul>
+
+                <!-- Mobile menu icon (hamburger).
+                     script.js toggles the menu visibility on small screens -->
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- =========================
+         HERO SECTION
+         ========================= -->
+    <section class="hero">
+
+        <!-- Hero background (using GIF as video-like background) -->
+        <div class="hero-background">
+            <!-- aria-hidden because this is decorative -->
+            <img src="static/videos/background-video.gif" alt="" class="hero-video" aria-hidden="true">
+
+            <!-- Overlay to make text easier to read on top of the background -->
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-grid">
+
+                <!-- Centered hero content -->
+                <div class="hero-content hero-content-centered">
+                    <h2 class="hero-title">Sustainable Botanical Crafts</h2>
+                    <p class="hero-subtitle">An Educational Journey</p>
+
+                    <!-- Short introduction text -->
+                    <p class="hero-description">
+                        Discover how natural ingredients and sustainable practices come together to create 
+                        handcrafted botanical products
+                    </p>
+
+                    <!-- CTA button -->
+                    <a href="about.html" class="btn btn-primary">Explore Our Story</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         BOTANICAL GALLERY PREVIEW
+         Shows 4 featured products on home page
+         ========================= -->
+    <section class="gallery-preview">
+        <div class="container">
+            <h2 class="section-title">Botanical Gallery</h2>
+
+            <!-- Grid layout (CSS controls 1/2/4 columns based on screen size) -->
+            <div class="gallery-grid">
+
+                <!-- Product card 1 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <!-- Product image (lazy loading improves performance) -->
+                        <img src="static/images/products/lavendar-soap.webp" alt="Lavender Soap" class="product-img" loading="lazy">
+                    </div>
+
+                    <!-- Product name -->
+                    <h3 class="product-name">Lavender Soap</h3>
+
+                    <!-- Short description -->
+                    <p class="product-description">
+                        Made with organic lavender, shea butter, and essential oils
+                    </p>
+                </article>
+
+                <!-- Product card 2 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="static/images/products/rose-soap.webp" alt="Rose Petal Bath Soak" class="product-img" loading="lazy">
+                    </div>
+                    <h3 class="product-name">Rose Petal Bath Soak</h3>
+                    <p class="product-description">
+                        Infused with dried rose petals, Himalayan salt, and chamomile
+                    </p>
+                </article>
+
+                <!-- Product card 3 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="static/images/products/eucalyptus-balm.png" alt="Eucalyptus Balm" class="product-img" loading="lazy">
+                    </div>
+                    <h3 class="product-name">Eucalyptus Balm</h3>
+                    <p class="product-description">
+                        Contains eucalyptus oil, beeswax, and coconut oil
+                    </p>
+                </article>
+
+                <!-- Product card 4 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="static/images/products/herbal-candle.webp" alt="Herbal Candle" class="product-img" loading="lazy">
+                    </div>
+                    <h3 class="product-name">Herbal Candle</h3>
+                    <p class="product-description">
+                        Soy wax infused with rosemary, thyme, and sage
+                    </p>
+                </article>
+
+            </div>
+
+            <!-- Button to go to full gallery page -->
+            <div class="section-cta">
+                <a href="gallery.html" class="btn btn-secondary">View Full Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         OUR STORY SECTION
+         ========================= -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-grid">
+
+                <!-- Text content -->
+                <div class="story-content">
+                    <h2 class="section-title">Our Story</h2>
+                    <p class="story-text">
+                        Learn about our journey into sustainable botanical crafting, our commitment to 
+                        eco-friendly practices, and the traditional techniques we preserve and document.
+                    </p>
+                    <p class="story-text">
+                        Each product tells a story of careful sourcing, traditional methods, and a 
+                        dedication to teaching these crafts to future generations.
+                    </p>
+
+                    <!-- Link to About page -->
+                    <a href="about.html" class="text-link">Read More About Us →</a>
+                </div>
+
+                <!-- Decorative visual block (CSS animation bubbles) -->
+                <div class="story-image">
+                    <div class="crafting-visual">
+                        <div class="floating-element element-1"></div>
+                        <div class="floating-element element-2"></div>
+                        <div class="floating-element element-3"></div>
+                        <div class="center-text">Traditional Craftsmanship</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         COMMITMENT SECTION
+         ========================= -->
+    <section class="commitment-section">
+        <div class="container">
+            <div class="commitment-grid">
+
+                <!-- Left visual (SVG animation) -->
+                <div class="commitment-image">
+                    <div class="sustainability-visual">
+                        <svg viewBox="0 0 300 300" class="commitment-svg">
+                            <!-- Decorative rings -->
+                            <circle cx="150" cy="150" r="100" fill="none" stroke="#8B7AA3" stroke-width="2" opacity="0.3"/>
+                            <circle cx="150" cy="150" r="80" fill="none" stroke="#A88FBF" stroke-width="2" opacity="0.4"/>
+                            <circle cx="150" cy="150" r="60" fill="none" stroke="#C9B8D9" stroke-width="2" opacity="0.5"/>
+
+                            <!-- Small cross lines -->
+                            <path d="M150,90 L150,110 M150,190 L150,210 M90,150 L110,150 M190,150 L210,150" 
+                                  stroke="#6B4E7E" stroke-width="3" stroke-linecap="round"/>
+
+                            <!-- Center circle -->
+                            <circle cx="150" cy="150" r="25" fill="#8B7AA3" opacity="0.6"/>
+
+                            <!-- Label text -->
+                            <text x="150" y="260" text-anchor="middle" font-family="Jost" font-size="16" fill="#6B4E7E" opacity="0.7">
+                                Sustainability
+                            </text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Right text -->
+                <div class="commitment-content">
+                    <h2 class="section-title">Our Commitment</h2>
+                    <p class="commitment-text">
+                        Every product showcases sustainable sourcing, zero-waste techniques, and 
+                        documentation of traditional methods.
+                    </p>
+                    <p class="commitment-text">
+                        We partner with educational institutions to ensure our practices are grounded 
+                        in research and shared with future generations.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         FOOTER SECTION
+         ========================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Footer links -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Navigate</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Botanical Gallery</a></li>
+                        <li><a href="process.html">The Process</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal / location -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#privacy">Privacy Policy (PDF)</a></li>
+                        <li><a href="#location">Located in Jaffna Market</a></li>
+                    </ul>
+                </div>
+
+                <!-- ECU external link -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Educational Partner</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.ecu.edu.au" target="_blank" rel="noopener">Visit ECU Website</a></li>
+                        <li class="partner-note">Mandatory external link</li>
+                    </ul>
+                </div>
+
+                <!-- Social icons -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Connect</h3>
+                    <div class="social-links">
+                        <!-- Social buttons are placeholders (href="#") -->
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.508-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 9a3 3 0 110 6 3 3 0 010-6z"/>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 011-1h3v-4h-3a5 5 0 00-5 5v2.01h-2l-.396 3.98h2.396v8.01z"/>
+                            </svg>
+                        </a>
+
+                        <a href="#" class="social-link" aria-label="Pinterest">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer bottom text -->
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 Lush Craft Educational Project. All rights reserved.</p>
+                <p class="accessibility-note">Mobile-First Design | WCAG 2.1 Compliant</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript file for menu + filter interactions -->
+    <script src="script.js"></script>
+</body>
+</html>
