@@ -1,50 +1,38 @@
-// script.js
+//script.js (Lush Crafts)
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
 
-document.addEventListener("DOMContentLoaded", () => {
-
-  // Mobile menu toggle (for small screens)
-  const menuBtn = document.querySelector(".mobile-menu-toggle");
-  const navMenu = document.querySelector(".nav-menu");
-
-  if (menuBtn && navMenu) {
-    menuBtn.addEventListener("click", () => {
-      navMenu.classList.toggle("mobile-active");
-      menuBtn.setAttribute(
-        "aria-expanded",
-        navMenu.classList.contains("mobile-active") ? "true" : "false"
-      );
-    });
-
-    // If user resizes to desktop, close the menu
-    window.addEventListener("resize", () => {
-      if (window.innerWidth >= 768) {
-        navMenu.classList.remove("mobile-active");
-        menuBtn.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-
-  // Product filter (gallery page)
-  const filterButtons = document.querySelectorAll(".filter-btn");
-  const productCards = document.querySelectorAll(".product-card-detailed");
-
-  if (filterButtons.length && productCards.length) {
-    filterButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        // Button active state
-        filterButtons.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        // Get requested category
-        const category = btn.getAttribute("data-category") || "all";
-
-        // Show / hide cards based on category
-        productCards.forEach((card) => {
-          const cardCats = card.getAttribute("data-category") || "";
-          const show = category === "all" || cardCats.includes(category);
-          card.style.display = show ? "block" : "none";
+    if (mobileMenuToggle && navMenu) {
+        // Add a click event to toggle the mobile menu
+        mobileMenuToggle.addEventListener('click', function() {
+            // Toggle the 'mobile-active' class to show/hide the menu
+            navMenu.classList.toggle('mobile-active');
+            
+            // Animate the hamburger icon
+            const spans = this.querySelectorAll('span');
+            spans.forEach((span, index) => {
+                span.classList.toggle('active');
+                if (index === 0) {
+                    span.style.transform = span.classList.contains('active') ? 
+                        'rotate(45deg) translateY(8px)' : 'none';
+                } else if (index === 1) {
+                    span.style.opacity = span.classList.contains('active') ? '0' : '1';
+                } else if (index === 2) {
+                    span.style.transform = span.classList.contains('active') ? 
+                        'rotate(-45deg) translateY(-8px)' : 'none';
+                }
+            });
+            
+            // Update ARIA attributes for better accessibility
+            const isExpanded = navMenu.classList.contains('mobile-active');
+            this.setAttribute('aria-expanded', isExpanded);
         });
-      });
+    }
+
+    // Lazy-load images - if needed, you can remove 'loading="lazy"' here for better compatibility
+    const imagesWithLazyLoading = document.querySelectorAll('img[loading="lazy"]');
+    imagesWithLazyLoading.forEach(img => {
+        img.removeAttribute('loading');
     });
-  }
 });
