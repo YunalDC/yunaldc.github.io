@@ -1268,8 +1268,14 @@ a:hover, a:focus {
 }
 
 .footer-bottom {
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
     text-align: center;
-    padding-top: var(--space-lg);
+
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-sm);
+    margin-top: var(--space-lg);
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
