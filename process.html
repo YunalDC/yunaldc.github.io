@@ -1,97 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Browser tab title -->
     <title>The Crafting Process - Lush Crafts</title>
-
-    <!-- Main stylesheet -->
     <link rel="stylesheet" href="styles.css">
-
-    <!-- Preconnect for faster font load -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- =========================
-         HEADER / NAVIGATION
-         ========================= -->
+    <!-- Navigation -->
     <header class="header">
         <div class="container">
             <nav class="nav">
-
-                <!-- Logo links to homepage -->
                 <div class="logo">
                     <a href="index.html">
                         <img src="static/images/logo.png" alt="Lush Craft Logo" class="logo-image">
                     </a>
                 </div>
-
-                <!-- Top navigation -->
-                <ul class="nav-menu">
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
-                    <li><a href="gallery.html" class="nav-link">Botanical Gallery</a></li>
-
-                    <!-- active class highlights this page -->
-                    <li><a href="process.html" class="nav-link active">The Process</a></li>
-                </ul>
-
-                <!-- Mobile menu button -->
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-
+                
+                <ul class="nav-menu">
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="gallery.html" class="nav-link">Botanical Gallery</a></li>
+                    <li><a href="process.html" class="nav-link">The Process</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <!-- =========================
-         PAGE HEADER
-         ========================= -->
+    <!-- Page Header -->
     <section class="page-header">
         <div class="container">
             <h1 class="page-title">The Crafting Process</h1>
-
-            <!-- Short intro -->
-            <p class="page-subtitle">
-                From sustainable sourcing to finished products, discover our traditional botanical crafting methods
-            </p>
+            <p class="page-subtitle">From sustainable sourcing to finished products, discover our traditional botanical crafting methods</p>
         </div>
     </section>
 
-    <!-- =========================
-         PROCESS STEPS SECTION
-         Each step describes the workflow
-         ========================= -->
+    <!-- Process Steps -->
     <section class="process-section">
         <div class="container">
-
             <!-- Step 1 -->
             <article class="process-step">
                 <div class="step-grid">
-
-                    <!-- Left side: visual (SVG illustration) -->
                     <div class="step-image">
                         <div class="process-visual step-1-visual">
                             <svg viewBox="0 0 400 400" class="step-svg">
-                                <!-- SVG gradients and shapes create a clean scalable illustration -->
                                 <defs>
                                     <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
                                         <stop offset="0%" style="stop-color:#8FAA70;stop-opacity:0.4" />
                                         <stop offset="100%" style="stop-color:#6B8E4E;stop-opacity:0.6" />
                                     </linearGradient>
                                 </defs>
-
-                                <!-- Plant illustration (represents natural sourcing) -->
+                                <!-- Plant illustration -->
                                 <rect x="150" y="250" width="100" height="120" fill="#A8761E" opacity="0.3" rx="10"/>
                                 <ellipse cx="200" cy="180" rx="80" ry="100" fill="url(#grad1)"/>
                                 <path d="M200,100 Q220,140 200,180" stroke="#6B8E4E" stroke-width="3" fill="none"/>
@@ -99,195 +65,163 @@
                                 <circle cx="180" cy="140" r="25" fill="#A8BF8B" opacity="0.6"/>
                                 <circle cx="220" cy="140" r="25" fill="#A8BF8B" opacity="0.6"/>
                                 <circle cx="200" cy="110" r="30" fill="#8FAA70" opacity="0.7"/>
-
-                                <!-- Small badge to show certification idea -->
+                                <!-- Certification badge -->
                                 <circle cx="320" cy="100" r="40" fill="#6B4E7E" opacity="0.2"/>
-                                <text x="320" y="95" text-anchor="middle" font-family="Jost"
+                                <text x="320" y="95" text-anchor="middle" font-family="Jost" 
                                       font-size="12" fill="#6B4E7E" font-weight="600">Certified</text>
-                                <text x="320" y="110" text-anchor="middle" font-family="Jost"
+                                <text x="320" y="110" text-anchor="middle" font-family="Jost" 
                                       font-size="10" fill="#6B4E7E">Organic</text>
                             </svg>
                         </div>
                     </div>
-
-                    <!-- Right side: text -->
                     <div class="step-content">
                         <div class="step-number">1</div>
                         <h2 class="step-title">Sustainable Sourcing</h2>
                         <p class="step-description">
-                            We carefully select organic botanical ingredients from certified sustainable farms and
-                            ethical suppliers. Every ingredient is traced and documented to ensure quality and
+                            We carefully select organic botanical ingredients from certified sustainable farms and 
+                            ethical suppliers. Every ingredient is traced and documented to ensure quality and 
                             environmental responsibility.
                         </p>
                         <p class="step-description">
-                            Our sourcing philosophy prioritizes local producers, fair trade practices, and
-                            biodiversity preservation. We partner with farms that use regenerative agriculture
+                            Our sourcing philosophy prioritizes local producers, fair trade practices, and 
+                            biodiversity preservation. We partner with farms that use regenerative agriculture 
                             techniques.
                         </p>
                     </div>
-
                 </div>
             </article>
 
-            <!-- Step 2 (reverse class swaps image/text for layout variety) -->
+            <!-- Step 2 -->
             <article class="process-step reverse">
                 <div class="step-grid">
-
-                    <!-- Text side -->
                     <div class="step-content">
                         <div class="step-number">2</div>
                         <h2 class="step-title">Traditional Preparation</h2>
                         <p class="step-description">
-                            Using time-honored methods passed down through generations, we prepare each botanical
-                            ingredient with care. Cold-pressing, infusion, and gentle extraction preserve the
+                            Using time-honored methods passed down through generations, we prepare each botanical 
+                            ingredient with care. Cold-pressing, infusion, and gentle extraction preserve the 
                             natural properties of each plant.
                         </p>
                         <p class="step-description">
-                            Our preparation techniques honor traditional knowledge while incorporating modern
-                            understanding of botanical chemistry. This ensures maximum potency and therapeutic
+                            Our preparation techniques honor traditional knowledge while incorporating modern 
+                            understanding of botanical chemistry. This ensures maximum potency and therapeutic 
                             benefits.
                         </p>
                     </div>
-
-                    <!-- Visual side -->
                     <div class="step-image">
                         <div class="process-visual step-2-visual">
                             <svg viewBox="0 0 400 400" class="step-svg">
-                                <!-- Mortar and pestle illustration -->
+                                <!-- Mortar and pestle -->
                                 <ellipse cx="200" cy="280" rx="90" ry="30" fill="#8B7AA3" opacity="0.3"/>
-                                <path d="M140,280 Q140,200 200,180 Q260,200 260,280"
+                                <path d="M140,280 Q140,200 200,180 Q260,200 260,280" 
                                       fill="#A88FBF" opacity="0.4" stroke="#6B4E7E" stroke-width="3"/>
-
                                 <!-- Pestle -->
                                 <rect x="180" y="80" width="40" height="140" fill="#8B7AA3" opacity="0.5" rx="20"/>
                                 <ellipse cx="200" cy="80" rx="25" ry="15" fill="#A88FBF" opacity="0.6"/>
-
-                                <!-- Herbs -->
+                                <!-- Herbs inside -->
                                 <circle cx="180" cy="240" r="15" fill="#8FAA70" opacity="0.6"/>
                                 <circle cx="220" cy="250" r="12" fill="#A8BF8B" opacity="0.6"/>
                                 <circle cx="200" cy="260" r="18" fill="#6B8E4E" opacity="0.7"/>
-
-                                <!-- Aroma lines -->
-                                <path d="M160,200 Q160,150 150,120" stroke="#C9B8D9" stroke-width="2"
+                                <!-- Steam/aroma lines -->
+                                <path d="M160,200 Q160,150 150,120" stroke="#C9B8D9" stroke-width="2" 
                                       fill="none" opacity="0.5" stroke-dasharray="5,5"/>
-                                <path d="M240,200 Q240,150 250,120" stroke="#C9B8D9" stroke-width="2"
+                                <path d="M240,200 Q240,150 250,120" stroke="#C9B8D9" stroke-width="2" 
                                       fill="none" opacity="0.5" stroke-dasharray="5,5"/>
                             </svg>
                         </div>
                     </div>
-
                 </div>
             </article>
 
             <!-- Step 3 -->
             <article class="process-step">
                 <div class="step-grid">
-
-                    <!-- Visual side -->
                     <div class="step-image">
                         <div class="process-visual step-3-visual">
                             <svg viewBox="0 0 400 400" class="step-svg">
-                                <!-- Hands + product illustration -->
+                                <!-- Hands crafting -->
                                 <ellipse cx="150" cy="200" rx="60" ry="80" fill="#D4A5C4" opacity="0.3"/>
                                 <ellipse cx="250" cy="200" rx="60" ry="80" fill="#D4A5C4" opacity="0.3"/>
-
+                                <!-- Product being made -->
                                 <rect x="170" y="220" width="60" height="80" fill="#C9B8D9" opacity="0.5" rx="5"/>
                                 <circle cx="200" cy="240" r="25" fill="#8B7AA3" opacity="0.6"/>
-
                                 <!-- Tools -->
                                 <line x1="120" y1="150" x2="160" y2="180" stroke="#6B4E7E" stroke-width="3"/>
                                 <line x1="280" y1="150" x2="240" y2="180" stroke="#6B4E7E" stroke-width="3"/>
-
-                                <!-- Sparkles -->
+                                <!-- Sparkles indicating care -->
                                 <circle cx="140" cy="140" r="3" fill="#F4D03F" opacity="0.8"/>
                                 <circle cx="260" cy="140" r="3" fill="#F4D03F" opacity="0.8"/>
                                 <circle cx="200" cy="120" r="4" fill="#F4D03F" opacity="0.8"/>
-
-                                <text x="200" y="350" text-anchor="middle" font-family="Cormorant Garamond"
+                                <text x="200" y="350" text-anchor="middle" font-family="Cormorant Garamond" 
                                       font-size="20" fill="#6B4E7E" opacity="0.6">Handcrafted with Care</text>
                             </svg>
                         </div>
                     </div>
-
-                    <!-- Text side -->
                     <div class="step-content">
                         <div class="step-number">3</div>
                         <h2 class="step-title">Handcrafted Creation</h2>
                         <p class="step-description">
-                            Each product is carefully handcrafted in small batches. We blend, mold, and shape using
+                            Each product is carefully handcrafted in small batches. We blend, mold, and shape using 
                             zero-waste techniques, ensuring every ingredient serves a purpose and nothing goes to waste.
                         </p>
                         <p class="step-description">
-                            Our artisans bring years of experience and deep knowledge of botanical properties. Every
+                            Our artisans bring years of experience and deep knowledge of botanical properties. Every 
                             batch is crafted with intention, creating products that are both beautiful and functional.
                         </p>
                     </div>
-
                 </div>
             </article>
 
             <!-- Step 4 -->
             <article class="process-step reverse">
                 <div class="step-grid">
-
-                    <!-- Text side -->
                     <div class="step-content">
                         <div class="step-number">4</div>
                         <h2 class="step-title">Quality Documentation</h2>
                         <p class="step-description">
-                            Every batch is tested and documented. We record ingredients, methods, and outcomes to
+                            Every batch is tested and documented. We record ingredients, methods, and outcomes to 
                             preserve traditional knowledge and ensure consistent quality.
                         </p>
                         <p class="step-description">
-                            This documentation supports our educational mission. By sharing our processes, we help
-                            preserve traditional crafting techniques and inspire future generations of botanical
+                            This documentation supports our educational mission. By sharing our processes, we help 
+                            preserve traditional crafting techniques and inspire future generations of botanical 
                             artisans.
                         </p>
                     </div>
-
-                    <!-- Visual side -->
                     <div class="step-image">
                         <div class="process-visual step-4-visual">
                             <svg viewBox="0 0 400 400" class="step-svg">
-                                <!-- Notebook illustration -->
-                                <rect x="120" y="100" width="160" height="220" fill="#FFF9C4" opacity="0.5"
+                                <!-- Document/notebook -->
+                                <rect x="120" y="100" width="160" height="220" fill="#FFF9C4" opacity="0.5" 
                                       stroke="#6B4E7E" stroke-width="3" rx="5"/>
-
-                                <!-- Lines for written text -->
+                                <!-- Lines representing text -->
                                 <line x1="140" y1="140" x2="260" y2="140" stroke="#6B4E7E" stroke-width="2" opacity="0.4"/>
                                 <line x1="140" y1="170" x2="250" y2="170" stroke="#6B4E7E" stroke-width="2" opacity="0.4"/>
                                 <line x1="140" y1="200" x2="260" y2="200" stroke="#6B4E7E" stroke-width="2" opacity="0.4"/>
                                 <line x1="140" y1="230" x2="240" y2="230" stroke="#6B4E7E" stroke-width="2" opacity="0.4"/>
                                 <line x1="140" y1="260" x2="260" y2="260" stroke="#6B4E7E" stroke-width="2" opacity="0.4"/>
                                 <line x1="140" y1="290" x2="250" y2="290" stroke="#6B4E7E" stroke-width="2" opacity="0.4"/>
-
-                                <!-- Checkmark badge -->
+                                <!-- Checkmark -->
                                 <circle cx="320" cy="200" r="40" fill="#8FAA70" opacity="0.3"/>
-                                <path d="M300,200 L315,215 L340,185" stroke="#6B8E4E" stroke-width="4"
+                                <path d="M300,200 L315,215 L340,185" stroke="#6B8E4E" stroke-width="4" 
                                       fill="none" stroke-linecap="round"/>
                             </svg>
                         </div>
                     </div>
-
                 </div>
             </article>
-
         </div>
     </section>
 
-    <!-- =========================
-         CTA SECTION
-         Direct user to other pages
-         ========================= -->
+    <!-- Call to Action -->
     <section class="process-cta">
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Learn More About Our Methods</h2>
                 <p class="cta-text">
-                    Explore our collection to see the results of our traditional crafting process,
+                    Explore our collection to see the results of our traditional crafting process, 
                     or read about our commitment to sustainability and education.
                 </p>
-
                 <div class="cta-buttons">
                     <a href="gallery.html" class="btn btn-primary">View Gallery</a>
                     <a href="about.html" class="btn btn-secondary">Our Story</a>
@@ -296,9 +230,7 @@
         </div>
     </section>
 
-    <!-- =========================
-         FOOTER
-         ========================= -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -310,21 +242,21 @@
                         <li><a href="process.html">The Process</a></li>
                     </ul>
                 </div>
-
+                
                 <div class="footer-column">
                     <h3 class="footer-title">Legal</h3>
                     <ul class="footer-links">
-                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
                     </ul>
                 </div>
-
+                
                 <div class="footer-column">
                     <h3 class="footer-title">Educational Partner</h3>
                     <ul class="footer-links">
                         <li><a href="https://www.ecu.edu.au" target="_blank" rel="noopener">Visit ECU Website</a></li>
                     </ul>
                 </div>
-
+                
                 <div class="footer-column">
                     <h3 class="footer-title">Connect</h3>
                     <div class="social-links">
@@ -346,14 +278,13 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="footer-bottom">
                 <p class="copyright">© 2024 Lush Craft Educational Project. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JS for mobile menu / effects -->
     <script src="script.js"></script>
 </body>
 </html>
