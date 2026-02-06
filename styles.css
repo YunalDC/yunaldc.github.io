@@ -1334,16 +1334,10 @@ a:hover, a:focus {
 }
 
 /* ===== PRODUCT IMAGE STYLES ===== */
-.product-img,
-.product-img-detailed {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform var(--transition-slow);
+.product-img {
+    object-fit: contain;
 }
 
-.product-card:hover .product-img,
-.product-card-detailed:hover .product-img-detailed {
-    transform: scale(1.1);
+.product-img-detailed {
+    object-fit: cover;
 }
