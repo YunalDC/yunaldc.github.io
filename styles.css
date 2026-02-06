@@ -1,7 +1,5 @@
 /* =========================================
    LUSH CRAFTS - SUSTAINABLE BOTANICAL DESIGN
-   Soft, organic aesthetic with purple accents
-   Mobile-first, WCAG 2.1 compliant
    ========================================= */
 
 /* ===== CSS VARIABLES ===== */
@@ -215,6 +213,7 @@ a:hover, a:focus {
 @media (min-width: 768px) {
     .nav-menu {
         display: flex;
+        z-index: 1000;
     }
 }
 
@@ -260,19 +259,78 @@ a:hover, a:focus {
     padding: var(--space-xs);
 }
 
-@media (min-width: 768px) {
+/* ===== HEADER & NAVIGATION Mobile ===== */
+@media (max-width: 767px) {
     .mobile-menu-toggle {
         display: none;
     }
-}
 
-.mobile-menu-toggle span {
+    .mobile-menu-toggle span {
     width: 25px;
     height: 3px;
     background: var(--purple-dark);
     border-radius: var(--radius-full);
     transition: all var(--transition-base);
 }
+    .nav-menu {
+        display: none; 
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-menu.mobile-active {
+        display: flex; 
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .nav-link:hover {
+        background-color: #f0f0f0;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .mobile-menu-toggle span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 6px 0;
+        background-color: #333;
+        transition: 0.4s;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
 
 /* ===== HERO SECTION ===== */
 .hero {
@@ -306,6 +364,7 @@ a:hover, a:focus {
     width: 100%;
     height: 100%;
     z-index: 0;
+    overflow: hidden;
 }
 
 .hero-video {
@@ -314,6 +373,9 @@ a:hover, a:focus {
     object-fit: cover;
     object-position: center;
     display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .hero-overlay {
@@ -563,10 +625,11 @@ a:hover, a:focus {
 
 .product-image {
     width: 100%;
-    height: 260px;                
+    aspect-ratio: 1;
+    position: relative;
+    overflow: hidden;
     background: #f0f0f0;
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -575,9 +638,11 @@ a:hover, a:focus {
 .product-img {
     width: 100%;
     height: 100%;
-    object-fit: contain;           
+    object-fit: cover;
     object-position: center;
+    transition: transform var(--transition-slow);
     display: block;
+    max-width: 100%;
 }
 
 .product-card:hover .product-img {
@@ -1269,17 +1334,24 @@ a:hover, a:focus {
 
 .footer-bottom {
     display: flex;
-    justify-content: center; /* horizontal */
-    align-items: center;     /* vertical */
-    text-align: center;
-
+    justify-content: center; 
+    align-items: center; 
     padding-top: var(--space-xl);
     padding-bottom: var(--space-sm);
     margin-top: var(--space-lg);
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.copyright, .accessibility-note {
+.copyright {
+    font-size: 0.95rem;
+    color: var(--purple-pale);
+    margin: 0;
+    line-height: 1.6;
+    text-align: center; 
+}
+
+
+.accessibility-note {
     font-size: 0.9rem;
     color: var(--purple-pale);
     margin-bottom: var(--space-xs);
@@ -1333,31 +1405,93 @@ a:hover, a:focus {
     }
 }
 
-/* Gallery / preview cards */
-.product-image .product-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    display: block;
-    transition: transform var(--transition-slow);
+/* ===== PRODUCT IMAGE STYLES ===== */
+.privacy-content {
+    padding: var(--space-3xl) 0;
+    background: var(--neutral-white);
 }
 
-/* Detailed product pages */
-.product-image-detailed .product-img-detailed {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    transition: transform var(--transition-slow);
+.privacy-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-/* Hover effects (unchanged behavior) */
-.product-card:hover .product-img {
-    transform: scale(1.1);
+.privacy-section {
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--neutral-light);
 }
 
-.product-card-detailed:hover .product-img-detailed {
-    transform: scale(1.08);
+.privacy-section:last-of-type {
+    border-bottom: none;
+}
+
+.privacy-section h2 {
+    color: var(--purple-dark);
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    margin-bottom: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.privacy-section h3 {
+    color: var(--primary-purple);
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    margin-bottom: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+.privacy-section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--neutral-dark);
+    margin-bottom: var(--space-md);
+}
+
+.privacy-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: var(--space-md);
+}
+
+.privacy-section ul li {
+    position: relative;
+    padding-left: var(--space-lg);
+    margin-bottom: var(--space-sm);
+    line-height: 1.7;
+    color: var(--neutral-dark);
+}
+
+.privacy-section ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-purple);
+    font-weight: 600;
+}
+
+.privacy-section a {
+    color: var(--primary-purple);
+    text-decoration: underline;
+    transition: color var(--transition-fast);
+}
+
+.privacy-section a:hover {
+    color: var(--purple-dark);
+}
+
+.privacy-back-link {
+    text-align: center;
+    margin-top: var(--space-3xl);
+    padding-top: var(--space-xl);
+    border-top: 2px solid var(--purple-light);
+}
+
+@media (max-width: 768px) {
+    .privacy-section h2 {
+        margin-top: var(--space-md);
+    }
+    
+    .privacy-section p {
+        font-size: 1rem;
+    }
 }
