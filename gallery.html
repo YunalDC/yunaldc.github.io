@@ -1,199 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Botanical Gallery - Lush Crafts</title>
-
-  <!-- Main site stylesheet (same folder as this HTML) -->
-  <link rel="stylesheet" href="./styles.css" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botanical Gallery - Lush Crafts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <!-- Header / Navigation -->
-  <header class="header">
-    <div class="container">
-      <nav class="nav">
-        <!-- Logo links back to the homepage -->
-        <div class="logo">
-          <a href="index.html">
-            <img src="./static/images/logo.png" alt="Lush Craft Logo" class="logo-image" />
-          </a>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="static/images/logo.png" alt="Lush Craft Logo" class="logo-image">
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="gallery.html" class="nav-link active">Botanical Gallery</a></li>
+                    <li><a href="process.html" class="nav-link">The Process</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
         </div>
+    </header>
 
-        <!-- Desktop menu -->
-        <ul class="nav-menu">
-          <li><a href="about.html" class="nav-link">About Us</a></li>
-          <li><a href="gallery.html" class="nav-link active">Botanical Gallery</a></li>
-          <li><a href="process.html" class="nav-link">The Process</a></li>
-        </ul>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Botanical Gallery</h1>
+            <p class="page-subtitle">Product Showcase with Categories</p>
+        </div>
+    </section>
 
-        <!-- Mobile menu button (JS toggles the menu) -->
-        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </div>
-  </header>
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-bar">
+                <span class="filter-label">Category Filter:</span>
+                <button class="filter-btn active" data-category="all">All/Soap</button>
+                <button class="filter-btn" data-category="bath">Bath</button>
+                <button class="filter-btn" data-category="balm">Balm</button>
+                <button class="filter-btn" data-category="candle">Candle</button>
+            </div>
+        </div>
+    </section>
 
-  <!-- Page heading -->
-  <section class="page-header">
-    <div class="container">
-      <h1 class="page-title">Botanical Gallery</h1>
-      <p class="page-subtitle">Product Showcase with Categories</p>
-    </div>
-  </section>
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                <!-- Product 1: Lavender Soap -->
+                <article class="product-card-detailed" data-category="all soap">
+                    <div class="product-image-detailed">
+                        <img src="static/images/lavendar-soap.webp" alt="Lavender Soap" class="product-img-detailed" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Lavender Soap</h3>
+                        <p class="product-desc">Made with organic lavender essential oils, shea butter, and natural glycerin for a calming bathing experience.</p>
+                        <button class="btn-learn-more">Learn More</button>
+                    </div>
+                </article>
 
-  <!-- Filter buttons (JS reads data-category to show/hide items) -->
-  <section class="filter-section">
-    <div class="container">
-      <div class="filter-bar">
-        <span class="filter-label">Category Filter:</span>
-        <button class="filter-btn active" data-category="all">All/Soap</button>
-        <button class="filter-btn" data-category="bath">Bath</button>
-        <button class="filter-btn" data-category="balm">Balm</button>
-        <button class="filter-btn" data-category="candle">Candle</button>
-      </div>
-    </div>
-  </section>
+                <!-- Product 2: Rose Petal Bath Soak -->
+                <article class="product-card-detailed" data-category="bath">
+                    <div class="product-image-detailed">
+                        <img src="static/images/rose-soap.webp" alt="Rose Petal Bath Soak" class="product-img-detailed" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Rose Petal Bath Soak</h3>
+                        <p class="product-desc">Infused with dried rose petals, Himalayan pink salt, and chamomile flowers for luxurious relaxation.</p>
+                        <button class="btn-learn-more">Learn More</button>
+                    </div>
+                </article>
 
-  <!-- Products grid -->
-  <section class="products-section">
-    <div class="container">
-      <div class="products-grid">
+                <!-- Product 3: Eucalyptus Balm -->
+                <article class="product-card-detailed" data-category="balm">
+                    <div class="product-image-detailed">
+                        <img src="static/images/eucalyptus-balm.png" alt="Eucalyptus Balm" class="product-img-detailed" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Eucalyptus Balm</h3>
+                        <p class="product-desc">Contains pure eucalyptus oil, organic beeswax, and cold-pressed coconut oil for soothing relief.</p>
+                        <button class="btn-learn-more">Learn More</button>
+                    </div>
+                </article>
 
-        <!-- ✅ IMPORTANT: product images are inside /static/images/products/ -->
-        <!-- Product 1 -->
-        <article class="product-card-detailed" data-category="all soap">
-          <div class="product-image-detailed">
-            <img src="./static/images/products/lavendar-soap.webp" alt="Lavender Soap" class="product-img-detailed" loading="lazy">
-          </div>
-          <div class="product-info">
-            <h3 class="product-title">Lavender Soap</h3>
-            <p class="product-desc">
-              Made with organic lavender essential oils, shea butter, and natural glycerin for a calming bathing experience.
-            </p>
-            <button class="btn-learn-more">Learn More</button>
-          </div>
-        </article>
+                <!-- Product 4: Herbal Candle -->
+                <article class="product-card-detailed" data-category="candle">
+                    <div class="product-image-detailed">
+                        <img src="static/images/herbal-candle.webp" alt="Herbal Candle" class="product-img-detailed" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Herbal Candle</h3>
+                        <p class="product-desc">Soy wax infused with rosemary, thyme, and sage essential oils for a fresh, earthy aroma.</p>
+                        <button class="btn-learn-more">Learn More</button>
+                    </div>
+                </article>
 
-        <!-- Product 2 -->
-        <article class="product-card-detailed" data-category="bath">
-          <div class="product-image-detailed">
-            <img src="./static/images/products/rose-soap.webp" alt="Rose Petal Bath Soak" class="product-img-detailed" loading="lazy">
-          </div>
-          <div class="product-info">
-            <h3 class="product-title">Rose Petal Bath Soak</h3>
-            <p class="product-desc">
-              Infused with dried rose petals, Himalayan pink salt, and chamomile flowers for luxurious relaxation.
-            </p>
-            <button class="btn-learn-more">Learn More</button>
-          </div>
-        </article>
+                <!-- Product 5: Peppermint Soap -->
+                <article class="product-card-detailed" data-category="all soap">
+                    <div class="product-image-detailed">
+                        <img src="static/images/peppermint-soap.webp" alt="Peppermint Soap" class="product-img-detailed" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Peppermint Soap</h3>
+                        <p class="product-desc">Refreshing blend of peppermint oil, spearmint, and cooling menthol crystals for an invigorating wash.</p>
+                        <button class="btn-learn-more">Learn More</button>
+                    </div>
+                </article>
 
-        <!-- Product 3 -->
-        <article class="product-card-detailed" data-category="balm">
-          <div class="product-image-detailed">
-            <img src="./static/images/products/eucalyptus-balm.png" alt="Eucalyptus Balm" class="product-img-detailed" loading="lazy">
-          </div>
-          <div class="product-info">
-            <h3 class="product-title">Eucalyptus Balm</h3>
-            <p class="product-desc">
-              Contains pure eucalyptus oil, organic beeswax, and cold-pressed coconut oil for soothing relief.
-            </p>
-            <button class="btn-learn-more">Learn More</button>
-          </div>
-        </article>
+                <!-- Product 6: Chamomile Bath Tea -->
+                <article class="product-card-detailed" data-category="bath">
+                    <div class="product-image-detailed">
+                        <img src="static/images/chammomile-bath-tea.webp" alt="Chamomile Bath Tea" class="product-img-detailed" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Chamomile Bath Tea</h3>
+                        <p class="product-desc">Soothing blend of chamomile flowers, oats, and dried calendula petals for a relaxing soak.</p>
+                        <button class="btn-learn-more">Learn More</button>
+                    </div>
+                </article>
 
-        <!-- Product 4 -->
-        <article class="product-card-detailed" data-category="candle">
-          <div class="product-image-detailed">
-            <img src="./static/images/products/herbal-candle.webp" alt="Herbal Candle" class="product-img-detailed" loading="lazy">
-          </div>
-          <div class="product-info">
-            <h3 class="product-title">Herbal Candle</h3>
-            <p class="product-desc">
-              Soy wax infused with rosemary, thyme, and sage essential oils for a fresh, earthy aroma.
-            </p>
-            <button class="btn-learn-more">Learn More</button>
-          </div>
-        </article>
+                <!-- Product 7: Calendula Healing Balm -->
+                <article class="product-card-detailed" data-category="balm">
+                    <div class="product-image-detailed">
+                        <img src="static/images/calendula-heal-balm.webp" alt="Calendula Healing Balm" class="product-img-detailed" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Calendula Healing Balm</h3>
+                        <p class="product-desc">Calendula-infused olive oil with beeswax and vitamin E for skin healing and nourishment.</p>
+                        <button class="btn-learn-more">Learn More</button>
+                    </div>
+                </article>
 
-        <!-- Product 5 -->
-        <article class="product-card-detailed" data-category="all soap">
-          <div class="product-image-detailed">
-            <img src="./static/images/products/peppermint-soap.webp" alt="Peppermint Soap" class="product-img-detailed" loading="lazy">
-          </div>
-          <div class="product-info">
-            <h3 class="product-title">Peppermint Soap</h3>
-            <p class="product-desc">
-              Refreshing blend of peppermint oil, spearmint, and cooling menthol crystals for an invigorating wash.
-            </p>
-            <button class="btn-learn-more">Learn More</button>
-          </div>
-        </article>
+                <!-- Product 8: Citrus Blend Candle -->
+                <article class="product-card-detailed" data-category="candle">
+                    <div class="product-image-detailed">
+                        <img src="static/images/cirtus-candle.webp" alt="Citrus Blend Candle" class="product-img-detailed" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Citrus Blend Candle</h3>
+                        <p class="product-desc">Bright mix of lemon, orange, and grapefruit essential oils in eco-friendly soy wax.</p>
+                        <button class="btn-learn-more">Learn More</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
-        <!-- Product 6 -->
-        <article class="product-card-detailed" data-category="bath">
-          <div class="product-image-detailed">
-            <img src="./static/images/products/chammomile-bath-tea.webp" alt="Chamomile Bath Tea" class="product-img-detailed" loading="lazy">
-          </div>
-          <div class="product-info">
-            <h3 class="product-title">Chamomile Bath Tea</h3>
-            <p class="product-desc">
-              Soothing blend of chamomile flowers, oats, and dried calendula petals for a relaxing soak.
-            </p>
-            <button class="btn-learn-more">Learn More</button>
-          </div>
-        </article>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">Navigate</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Botanical Gallery</a></li>
+                        <li><a href="process.html">The Process</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Educational Partner</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.ecu.edu.au" target="_blank" rel="noopener">Visit ECU Website</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Connect</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.508-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 9a3 3 0 110 6 3 3 0 010-6z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 011-1h3v-4h-3a5 5 0 00-5 5v2.01h-2l-.396 3.98h2.396v8.01z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Pinterest">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 Lush Craft Educational Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-        <!-- Product 7 -->
-        <article class="product-card-detailed" data-category="balm">
-          <div class="product-image-detailed">
-            <img src="./static/images/products/calendula-heal-balm.webp" alt="Calendula Healing Balm" class="product-img-detailed" loading="lazy">
-          </div>
-          <div class="product-info">
-            <h3 class="product-title">Calendula Healing Balm</h3>
-            <p class="product-desc">
-              Calendula-infused olive oil with beeswax and vitamin E for skin healing and nourishment.
-            </p>
-            <button class="btn-learn-more">Learn More</button>
-          </div>
-        </article>
-
-        <!-- Product 8 -->
-        <article class="product-card-detailed" data-category="candle">
-          <div class="product-image-detailed">
-            <img src="./static/images/products/cirtus-candle.webp" alt="Citrus Blend Candle" class="product-img-detailed" loading="lazy">
-          </div>
-          <div class="product-info">
-            <h3 class="product-title">Citrus Blend Candle</h3>
-            <p class="product-desc">
-              Bright mix of lemon, orange, and grapefruit essential oils in eco-friendly soy wax.
-            </p>
-            <button class="btn-learn-more">Learn More</button>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-bottom">
-        <p class="copyright">© 2024 Lush Craft Educational Project. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Main JS file (same folder as this HTML) -->
-  <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
