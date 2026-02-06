@@ -1333,11 +1333,31 @@ a:hover, a:focus {
     }
 }
 
-/* ===== PRODUCT IMAGE STYLES ===== */
-.product-img {
+/* Gallery / preview cards */
+.product-image .product-img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
+    object-position: center;
+    display: block;
+    transition: transform var(--transition-slow);
 }
 
-.product-img-detailed {
+/* Detailed product pages */
+.product-image-detailed .product-img-detailed {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform var(--transition-slow);
+}
+
+/* Hover effects (unchanged behavior) */
+.product-card:hover .product-img {
+    transform: scale(1.1);
+}
+
+.product-card-detailed:hover .product-img-detailed {
+    transform: scale(1.08);
 }
